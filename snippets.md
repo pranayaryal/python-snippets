@@ -77,22 +77,22 @@ def load_df(chunk, coll_name):
     
     
     
-    ```{python}
-            # If dataframe is empty then create empty dataframe and return it
-        # as it was throwing an error
-        # print('Encountered empty dataframe')
-        lg.info('Empty dataframe with {}'.format(pickle) + dt.datetime.now().strftime("%a, %b %d, %Y, %H: %M: %S"))
-        cols = ['networkId', 't1PidKey', 't3PidKey', 't4PidKey', 'specialtyId',
-            'officeId', 'providerId', 'providerRatings']
-        df_empty = pd.DataFrame(columns=cols)
-        df_empty['networkId'] = df_empty['networkId'].astype('int64')
-        df_empty['officeId'] = df_empty['officeId'].astype('int64')
-        df_empty['providerId'] = df_empty['providerId'].astype('float64')
-        df_empty['specialtyId'] = df_empty['specialtyId'].astype('int64')
-        df_empty['t1PidKey'] = df_empty['t1PidKey'].astype('float64')
-        df_empty['t3PidKey'] = df_empty['t3PidKey'].astype('float64')
-        df_empty['t4PidKey'] = df_empty['t4PidKey'].astype('float64')
-        df_empty['providerRatings'] = df_empty['providerRatings'].astype(object)
-        print(df_empty.shape)
-        return df_empty
+    ```
+        # If dataframe is empty then create empty dataframe and return it
+    # as it was throwing an error
+    # print('Encountered empty dataframe')
+    lg.info('Empty dataframe with {}'.format(pickle) + dt.datetime.now().strftime("%a, %b %d, %Y, %H: %M: %S"))
+    cols = ['networkId', 't1PidKey', 't3PidKey', 't4PidKey', 'specialtyId',
+        'officeId', 'providerId', 'providerRatings']
+    df_empty = pd.DataFrame(columns=cols)
+    df_empty['networkId'] = df_empty['networkId'].astype('int64')
+    df_empty['officeId'] = df_empty['officeId'].astype('int64')
+    df_empty['providerId'] = df_empty['providerId'].astype('float64')
+    df_empty['specialtyId'] = df_empty['specialtyId'].astype('int64')
+    df_empty['t1PidKey'] = df_empty['t1PidKey'].astype('float64')
+    df_empty['t3PidKey'] = df_empty['t3PidKey'].astype('float64')
+    df_empty['t4PidKey'] = df_empty['t4PidKey'].astype('float64')
+    df_empty['providerRatings'] = df_empty['providerRatings'].astype(object)
+    print(df_empty.shape)
+    return df_empty
     ```

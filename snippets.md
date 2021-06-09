@@ -42,6 +42,7 @@ def load_df(chunk, coll_name):
  ```
  
  ### pandas dataframe reduce memory
+ 
  ```{python}
  def reduce_mem_usage(df, verbose=True):
     numerics = ['int16', 'int32', 'int64', 'float16', 'float32', 'float64']
@@ -73,6 +74,8 @@ def load_df(chunk, coll_name):
             end_mem, 100 * (start_mem - end_mem) / start_mem))
     return df
     ```
+    
+    
     
     ```{python}
             # If dataframe is empty then create empty dataframe and return it
